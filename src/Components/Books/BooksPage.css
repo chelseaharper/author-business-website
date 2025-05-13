@@ -19,3 +19,10 @@ h2 {
     width: 233px;
     height: 333px
   }
+
+  .booktext h2,
+  .booktext p {
+    margin: 0.5rem 0;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }

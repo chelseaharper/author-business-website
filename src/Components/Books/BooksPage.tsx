@@ -12,6 +12,7 @@ function BooksPage() {
                     <h2>Wake of the Phoenix</h2>
                     <p>Book description...</p>
                 </div>
+                <p>Buy Now! [This will become a link to purchase book!]</p>
             </div>
             <div id="book2" className='book-container'>
                 <div className='bookimage'>
@@ -21,6 +22,7 @@ function BooksPage() {
                     <h2>Tales of the Laisian Empire</h2>
                     <p>Book description...</p>
                 </div>
+                <p>Buy Now! [This will become a link to purchase book!]</p>
             </div>
 </>
     )
