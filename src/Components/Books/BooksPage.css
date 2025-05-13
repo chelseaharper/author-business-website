@@ -1,4 +1,4 @@
-h2 {
+h2, h3 {
     text-align: center;
     color: blanchedalmond;
   }
@@ -12,7 +12,7 @@ h2 {
     display: flex;
     align-items: flex-start;
     margin-bottom: 2rem;
-    margin-left: 200px;
+    margin-left: 350px;
   }
 
   .bookimage img {
@@ -20,9 +20,33 @@ h2 {
     height: 333px
   }
 
+  .booktext {
+    max-width: 40%;
+  }
+
   .booktext h2,
+  .booktext h3,
   .booktext p {
     margin: 0.5rem 0;
-    margin-left: 0.75rem;
+    margin-left: 2.75rem;
     margin-right: 0.75rem;
+
+  }
+
+  .purchase-link {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF; /* Bootstrap-style blue, change as needed */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 2px solid #0056b3;
+    transition: background-color 0.3s ease;
+  }
+  
+  .purchase-link:hover {
+    background-color: #0056b3;
   }
