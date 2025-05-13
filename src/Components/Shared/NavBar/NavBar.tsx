@@ -1,5 +1,6 @@
 import styles from './Navbar.module.css';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const StyledNavBar = styled.nav`
 display: flex;
@@ -16,17 +17,17 @@ export const NavBar = () => {
 
     return (
             <StyledNavBar className={styles.navbar}>
-                <a className={styles.title} href="/">Home</a>
+                <Link className={styles.title} to="/">Home</Link>
                 <div className={styles.menu}>
                     <ul className={styles.menuItems}>
                         <li>
-                            <a href="#blog">Blog</a>
+                            <Link to="/blog">Blog</Link>
                         </li>
                         <li>
-                            <a href="#services">Writer Services</a>
+                            <Link to="/services">Writer Services</Link>
                         </li>
                         <li>
-                            <a href="#books">Books</a>
+                            <Link to="/books">Books</Link>
                         </li>
                     </ul>
                 </div>

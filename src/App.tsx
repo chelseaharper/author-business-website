@@ -23,16 +23,14 @@ function App() {
 ];
 
   return (
-    <>
-    <Header />
-    <NavBar/>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage images={images}/>} />
-        <Route path="/#books" element={<BooksPage/>} />
-      </Routes>
+      <Header />
+        <NavBar/>
+          <Routes>
+            <Route path="/" element={<Homepage images={images}/>} />
+            <Route path="/books" element={<BooksPage/>} />
+          </Routes>
     </BrowserRouter>
-    </>
   );
 }
 
