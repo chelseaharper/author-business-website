@@ -1,0 +1,21 @@
+h2 {
+    text-align: center;
+    color: blanchedalmond;
+  }
+
+  p {
+    text-align: center;
+    color: antiquewhite;
+  }
+
+  .book-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    margin-left: 200px;
+  }
+
+  .bookimage img {
+    width: 233px;
+    height: 333px
+  }
