@@ -19,9 +19,16 @@ function App() {
     }
   }, [])
 
-  const images = [
-    "/Images/Tales_of_the_Laisian_Empire_eBook.png",
-    "/Images/wakeofthephoenix_ebook.png",
+  const books = [{
+    id: 'wake-of-the-phoenix',
+    title: 'Wake of the Phoenix',
+    coverImage: "/Images/wakeofthephoenix_ebook.png",
+  },
+    {
+      id: 'tales-of-the-laisian-empire',
+      title: 'Tales of the Laisian Empire',
+    coverImage: "/Images/Tales_of_the_Laisian_Empire_eBook.png",
+    }
 ];
 
   return (
@@ -29,7 +36,7 @@ function App() {
       <Header />
         <NavBar/>
           <Routes>
-            <Route path="/" element={<Homepage images={images}/>} />
+            <Route path="/" element={<Homepage books={books}/>} />
             <Route path="/books" element={<BooksPage/>} />
             <Route path="/kickstarter" element={<Kickstarters/>} />
             <Route path="/blog" element={<Blog/>} />
