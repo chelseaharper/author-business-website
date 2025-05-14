@@ -1,8 +1,26 @@
+import { useState } from 'react';
 import './BooksPage.css';
 
 function BooksPage() {
+    const [expandedSeries, setExpandedSeries] = useState({
+        artifice: true,
+        tales: true,
+    })
+
+    const toggleSeries = (seriesKey) => {
+        setExpandedSeries((prev) => ({
+            ...prev,
+            [seriesKey]: !prev[seriesKey],
+        }))
+    }
+
     return (
         <>
+        <div className='series-section'>
+            <h2 onClick={() => toggleSeries('artifice')} className='series-title'>
+                Artifice of Power Saga {expandedSeries.artifice ? '▼' : '▶'}
+            </h2>
+            {expandedSeries.artifice && (
             <div id="book1" className='book-container'>
                 <div className='bookimage'>
                     <img src="/Images/wakeofthephoenix_ebook.png" alt="Cover for Wake of the Phoenix" />
@@ -33,6 +51,13 @@ function BooksPage() {
                     Buy Now!
                 </a>
             </div>
+        )}
+        </div>
+        <div className='series-section'>
+        <h2 onClick={() => toggleSeries('tales')} className='series-title'>
+                Tales of the Laisian Empire {expandedSeries.tales ? '▼' : '▶'}
+            </h2>
+            {expandedSeries.tales && (
             <div id="book2" className='book-container'>
                 <div className='bookimage'>
                     <img src="/Images/Tales_of_the_Laisian_Empire_eBook.png" alt="Cover for Wake of the Phoenix" />
@@ -42,7 +67,8 @@ function BooksPage() {
                     <p>Book description...</p>
                 </div>
                 <p>Coming Soon!</p>
-            </div>
+            </div>)}
+        </div>
 </>
     )
 }
