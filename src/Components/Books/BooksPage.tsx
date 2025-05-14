@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './BooksPage.css';
 
 function BooksPage() {
@@ -14,6 +15,23 @@ function BooksPage() {
         }))
     }
 
+    const location = useLocation();
+
+useEffect(()=> {
+    if(location.hash) {
+        const el = document.getElementById(location.hash.slice(1));
+        if(el) {
+            setTimeout(() => {
+                console.log("Scrolling to:", location.hash.slice(1));
+                el.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                })
+            }, 100);
+        }
+    }
+}, [location]);
+
     return (
         <>
         <div className='series-section'>
@@ -21,7 +39,7 @@ function BooksPage() {
                 Artifice of Power Saga {expandedSeries.artifice ? '▼' : '▶'}
             </h2>
             {expandedSeries.artifice && (
-            <div id="book1" className='book-container'>
+            <div id="wake-of-the-phoenix" className='book-container'>
                 <div className='bookimage'>
                     <img src="/Images/wakeofthephoenix_ebook.png" alt="Cover for Wake of the Phoenix" />
                 </div>
@@ -58,9 +76,9 @@ function BooksPage() {
                 Tales of the Laisian Empire {expandedSeries.tales ? '▼' : '▶'}
             </h2>
             {expandedSeries.tales && (
-            <div id="book2" className='book-container'>
+            <div id="tales-of-the-laisian-empire" className='book-container'>
                 <div className='bookimage'>
-                    <img src="/Images/Tales_of_the_Laisian_Empire_eBook.png" alt="Cover for Wake of the Phoenix" />
+                    <img src="/Images/Tales_of_the_Laisian_Empire_eBook.png" alt="Cover for Tales of the Laisian Empire" />
                 </div>
                 <div className='booktext'>
                     <h2>Tales of the Laisian Empire</h2>

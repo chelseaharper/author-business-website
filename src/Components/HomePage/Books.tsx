@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledBooks = styled.div`
@@ -24,13 +25,17 @@ padding-right: 5px;
 object-fit: cover;
 `;
 
-function Books({images}) {
+function Books({books}: {books: {id: string, title: string, coverImage: string}[]}) {
     return (
         <StyledBooks>
-            {images.map(
-                (image: string, index: string) => (
-                    <Image key={index} src={image} />
-                )
+            {books.map((book) => (
+                <Link
+                to={`/books#${book.id}`}
+                key={book.id}
+                style={{ textDecoration: 'none'}}>
+                    <Image src={book.coverImage} />
+                </Link>
+            )
             )}
         </StyledBooks>
     )
