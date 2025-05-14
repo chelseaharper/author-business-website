@@ -1,7 +1,6 @@
 import './BooksPage.css';
 
 function BooksPage() {
-    console.log("book page reached");
     return (
         <>
             <div id="book1" className='book-container'>

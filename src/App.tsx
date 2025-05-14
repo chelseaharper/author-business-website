@@ -7,6 +7,8 @@ import Books from './Components/HomePage/Books';
 import NewsletterForm from './Components/HomePage/NewsletterForm';
 import Homepage from './Components/HomePage/Homepage';
 import BooksPage from './Components/Books/BooksPage';
+import Kickstarters from './Components/Kickstarters/Kickstarters';
+import Blog from './Components/Blog/Blog';
 
 function App() {
   useEffect(() => {
@@ -29,6 +31,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage images={images}/>} />
             <Route path="/books" element={<BooksPage/>} />
+            <Route path="/kickstarter" element={<Kickstarters/>} />
+            <Route path="/blog" element={<Blog/>} />
           </Routes>
     </BrowserRouter>
   );

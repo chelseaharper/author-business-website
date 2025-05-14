@@ -21,14 +21,17 @@ export const NavBar = () => {
                 <div className={styles.menu}>
                     <ul className={styles.menuItems}>
                         <li>
+                            <Link to="/books">Books</Link>
+                        </li>
+                        <li>
                             <Link to="/blog">Blog</Link>
                         </li>
                         <li>
+                            <Link to="/kickstarter">Kickstarters</Link>
+                        </li>
+                        {/* <li>
                             <Link to="/services">Writer Services</Link>
-                        </li>
-                        <li>
-                            <Link to="/books">Books</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </StyledNavBar>
