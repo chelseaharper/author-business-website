@@ -4,7 +4,7 @@ NOTE: To start this app, use npm start
 ROADMAP
 
 1. General Website
-Books Page: Display your books with relevant details (synopsis, cover art, etc.).
+Books Page: Display your books with relevant details (synopsis, cover art, etc.). DONE
 
 About Me Page: Personal bio, background, and connection to your writing.
 
