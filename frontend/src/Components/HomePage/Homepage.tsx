@@ -5,7 +5,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
     return(
     <>
         <Books books={books}/>
-        <NewsletterForm />
+        {/* <NewsletterForm /> */}
     </>)
 }
 

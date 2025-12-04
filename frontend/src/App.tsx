@@ -9,6 +9,7 @@ import Homepage from './Components/HomePage/Homepage';
 import BooksPage from './Components/Books/BooksPage';
 import Kickstarters from './Components/Kickstarters/Kickstarters';
 import Blog from './Components/Blog/Blog';
+import About from './Components/About/About';
 
 function App() {
   useEffect(() => {
@@ -39,7 +40,7 @@ function App() {
             <Route path="/" element={<Homepage books={books}/>} />
             <Route path="/books" element={<BooksPage/>} />
             <Route path="/kickstarter" element={<Kickstarters/>} />
-            <Route path="/blog" element={<Blog/>} />
+            <Route path="/aboutus" element={<About/>} />
           </Routes>
     </BrowserRouter>
   );

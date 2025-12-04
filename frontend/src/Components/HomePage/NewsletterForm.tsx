@@ -2,11 +2,12 @@ import React from 'react';
 
 const NewsletterForm = () => {
     return (
-        <form>
-            <div>
-            this is a form
-            </div>
-        </form>
+        <p>this is some new text I am adding to my homepage</p>
+        // <form>
+        //     <div>
+        //     this is a form
+        //     </div>
+        // </form>
     )
 }
 

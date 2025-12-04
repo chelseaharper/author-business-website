@@ -24,11 +24,14 @@ export const NavBar = () => {
                             <Link to="/books">Books</Link>
                         </li>
                         <li>
-                            <Link to="/blog">Blog</Link>
+                            <Link to="/aboutus">About Us</Link>
                         </li>
                         <li>
                             <Link to="/kickstarter">Kickstarters</Link>
                         </li>
+                        {/* <li>
+                            <Link to="/blog">Blog</Link>
+                        </li> */}
                         {/* <li>
                             <Link to="/services">Writer Services</Link>
                         </li> */}
