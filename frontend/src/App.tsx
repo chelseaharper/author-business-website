@@ -23,13 +23,13 @@ function App() {
   const books = [{
     id: 'wake-of-the-phoenix',
     title: 'Wake of the Phoenix',
-    coverImage: "/Images/wakeofthephoenix_ebook.png",
+    coverImage: "/Images/Wake of the Phoenix eBook.jpg",
   },
-    {
-      id: 'tales-of-the-laisian-empire',
-      title: 'Tales of the Laisian Empire',
-    coverImage: "/Images/Tales_of_the_Laisian_Empire_eBook.png",
-    }
+    // {
+    //   id: 'tales-of-the-laisian-empire',
+    //   title: 'Tales of the Laisian Empire',
+    // coverImage: "/Images/Tales_of_the_Laisian_Empire_eBook.png",
+    // }
 ];
 
   return (

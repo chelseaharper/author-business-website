@@ -5,7 +5,7 @@ import './BooksPage.css';
 function BooksPage() {
     const [expandedSeries, setExpandedSeries] = useState({
         artifice: true,
-        tales: true,
+        tales: false,
     })
 
     const toggleSeries = (seriesKey) => {
@@ -41,11 +41,12 @@ useEffect(()=> {
             {expandedSeries.artifice && (
             <div id="wake-of-the-phoenix" className='book-container'>
                 <div className='bookimage'>
-                    <img src="/Images/wakeofthephoenix_ebook.png" alt="Cover for Wake of the Phoenix" />
+                    <img src="/Images/Wake of the Phoenix eBook.jpg" alt="Cover for Wake of the Phoenix" />
                 </div>
                 <div className='booktext'>
                     <h2>Wake of the Phoenix</h2>
-                    <h3>War Hero. Thiefmaster's apprentice. Traitors. Every title comes with a price.</h3>
+                    <h3>War Hero. Thiefmaster's apprentice. Traitors.</h3>
+                    <h3>Every title comes with a price.</h3>
                     <p> Arkaen is a gods-damned saint. He sacrificed his childhood innocence fighting 
                         for the beleaguered rebellion in a civil war and relinquished a comfortable life 
                         with the man he loves to reclaim his place as high lord from corrupt nobles. Now, 
@@ -71,7 +72,7 @@ useEffect(()=> {
             </div>
         )}
         </div>
-        <div className='series-section'>
+        {/* <div className='series-section'>
         <h2 onClick={() => toggleSeries('tales')} className='series-title'>
                 Tales of the Laisian Empire {expandedSeries.tales ? '▼' : '▶'}
             </h2>
@@ -86,7 +87,7 @@ useEffect(()=> {
                 </div>
                 <p>Coming Soon!</p>
             </div>)}
-        </div>
+        </div> */}
 </>
     )
 }
