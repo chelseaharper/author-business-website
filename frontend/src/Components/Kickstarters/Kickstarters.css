@@ -7,3 +7,24 @@ h1, h2, h3 {
     text-align: center;
     color: antiquewhite;
   }
+
+  .backer-container {
+    background-color: black;
+    color: antiquewhite;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .backer-container ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px 30px;
+    list-style-position: inside;
+
+    width: fit-content;
+    margin: 0 auto;
+
+    text-align: left;
+    padding: 0;
+  }
