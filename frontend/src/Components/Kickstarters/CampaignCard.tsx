@@ -11,6 +11,7 @@ function CampaignCard({ campaign }) {
         <p>{campaign.description}</p>
         <p className={`campaign-status ${campaign.status}`}>
           {campaign.status === 'active' && 'Active'}
+          {campaign.status === 'upcoming' && 'Upcoming'}
           {campaign.status === 'funded' && 'Funded'}
           {campaign.status === 'failed' && 'Failed'}
         </p>

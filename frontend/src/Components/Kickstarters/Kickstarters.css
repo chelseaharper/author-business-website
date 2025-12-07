@@ -28,3 +28,56 @@ h1, h2, h3 {
     text-align: left;
     padding: 0;
   }
+
+  .campaign-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin: 0 auto 16px auto;
+  padding: 12px;
+  color: antiquewhite;
+
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1500PX;
+}
+
+.campaign-image img {
+  max-width: 150px;
+  border-radius: 4px;
+}
+
+.campaign-text {
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 900px;
+}
+
+.campaign-text h3, .campaign-status.active, .campaign-status.failed, .campaign-status.funded, .campaign-status.upcoming {
+  align-self: flex-start;
+  margin-left: 250px;
+}
+
+.campaign-status.active {
+  color: lightblue;
+}
+.campaign-status.upcoming {
+  color: lavender;
+}
+.campaign-status.funded {
+  color: lightgreen;
+}
+.campaign-status.failed {
+  color: lightcoral;
+}
+
+.campaign-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: blanchedalmond;
+  text-decoration: underline;
+}

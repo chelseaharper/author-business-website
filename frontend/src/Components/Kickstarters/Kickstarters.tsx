@@ -11,47 +11,47 @@ const kickstarters = [
         in the Artifice of Power Saga, including character illustrations,
         additional chapters, and foil jacket. This edition features the final
         release of the original cover of Wake of the Phoenix.`,
-        image: '',
+        image: 'Images/Wake_Hardcover_Proof.jpg',
         url: 'https://www.kickstarter.com/projects/crharper/wake-of-the-phoenix-limited-edition-hardcover',
         status: 'funded' //'active', 'funded', 'failed', 'upcoming'
 
     },
-    {
-        id: 'rise-release',
-        title: 'Rise of the Moirai',
-        description: `Continue the story of Arkaen, Kilasha, Niamsha, and Sayli with Rise of the Moirai.`,
-        image: '',
-        url: 'https://www.kickstarter.com/projects/crharper/wake-of-the-phoenix-limited-edition-hardcover',
-        status: 'upcoming' //'active', 'funded', 'failed', 'upcoming'
+    // {
+    //     id: 'rise-release',
+    //     title: 'Rise of the Moirai',
+    //     description: `Continue the story of Arkaen, Kilasha, Niamsha, and Sayli with Rise of the Moirai.`,
+    //     image: 'Images/Wake_Hardcover_Proof.jpg',
+    //     url: 'https://www.kickstarter.com/projects/crharper/wake-of-the-phoenix-limited-edition-hardcover',
+    //     status: 'upcoming' //'active', 'funded', 'failed', 'upcoming'
 
-    },
-    {
-        id: 'romantasy-special',
-        title: 'On Cursed Wings: Early Special Edition',
-        description: `Annelise was always just a country girl, preferring to stay home in the sleepy
-        village working in her father's inn. Not like her sisters and brother, who clamored to join
-        their mother at the capital serving the queen. And when their mother was summoned to the queen's
-        service permanently, Annelise chose to stay behind with their father again. Her sisters think
-        she stayed for the view... of the daring woodsman and her childhood friend, Bastion. Then, her
-        father is caught in a freak change of the seasons, falling into a deadly dream. Only Annelise
-        knows anough of the local lore to brave the grounds of the forgotten castle and finds herbs that
-        can save him. Or so she thinks, until she arrives and finds Bastion creeping into the castle
-        and watches as the monster who lives there drags him away. Now she must choose. Try to save her
-        father, who lies gravely ill, or save the boy next door who has always held her heart.`,
-        image: '',
-        url: 'https://www.kickstarter.com/projects/crharper/wake-of-the-phoenix-limited-edition-hardcover',
-        status: 'active' //'active', 'funded', 'failed', 'upcoming'
+    // },
+    // {
+    //     id: 'romantasy-special',
+    //     title: 'On Cursed Wings: Early Special Edition',
+    //     description: `Annelise was always just a country girl, preferring to stay home in the sleepy
+    //     village working in her father's inn. Not like her sisters and brother, who clamored to join
+    //     their mother at the capital serving the queen. And when their mother was summoned to the queen's
+    //     service permanently, Annelise chose to stay behind with their father again. Her sisters think
+    //     she stayed for the view... of the daring woodsman and her childhood friend, Bastion. Then, her
+    //     father is caught in a freak change of the seasons, falling into a deadly dream. Only Annelise
+    //     knows anough of the local lore to brave the grounds of the forgotten castle and finds herbs that
+    //     can save him. Or so she thinks, until she arrives and finds Bastion creeping into the castle
+    //     and watches as the monster who lives there drags him away. Now she must choose. Try to save her
+    //     father, who lies gravely ill, or save the boy next door who has always held her heart.`,
+    //     image: 'Images/Wake_Hardcover_Proof.jpg',
+    //     url: 'https://www.kickstarter.com/projects/crharper/wake-of-the-phoenix-limited-edition-hardcover',
+    //     status: 'active' //'active', 'funded', 'failed', 'upcoming'
 
-    },
-    {
-        id: 'autumns-realm',
-        title: 'Autumns Realm video game',
-        description: `This rpg was intended to be a fund project and really blew out of proportion!`,
-        image: '',
-        url: 'https://www.kickstarter.com/projects/crharper/wake-of-the-phoenix-limited-edition-hardcover',
-        status: 'failed' //'active', 'funded', 'failed'
+    // },
+    // {
+    //     id: 'autumns-realm',
+    //     title: 'Autumns Realm video game',
+    //     description: `This rpg was intended to be a fund project and really blew out of proportion!`,
+    //     image: 'Images/Wake_Hardcover_Proof.jpg',
+    //     url: 'https://www.kickstarter.com/projects/crharper/wake-of-the-phoenix-limited-edition-hardcover',
+    //     status: 'failed' //'active', 'funded', 'failed'
 
-    }
+    // }
 ]
 
 const activeCampaigns = kickstarters.filter(c => c.status === 'active');
@@ -91,18 +91,26 @@ function Kickstarters()  {
                     <li>Jerdarius Collier</li>
                 </ul>
             </div>
-                <CollapsibleSection title="Active Campaigns">
+                {activeCampaigns.length > 0 && (
+                    <CollapsibleSection title="Active Campaigns">
                     {activeCampaigns.map(c => (<CampaignCard key={c.id} campaign={c} />))}
-                </CollapsibleSection>
-                <CollapsibleSection title="Upcoming Campaigns">
+                    </CollapsibleSection>
+                )}
+                {upcomingCampaigns.length > 0 && (
+                    <CollapsibleSection title="Upcoming Campaigns">
                     {upcomingCampaigns.map(c => (<CampaignCard key={c.id} campaign={c} />))}
-                </CollapsibleSection>
-                <CollapsibleSection title="Funded Campaigns">
+                    </CollapsibleSection>
+                )}
+                {fundedCampaigns.length > 0 && (
+                    <CollapsibleSection title="Funded Campaigns">
                     {fundedCampaigns.map(c => (<CampaignCard key={c.id} campaign={c} />))}
-                </CollapsibleSection>
-                <CollapsibleSection title="Failed Campaigns">
+                    </CollapsibleSection>
+                )}
+                {failedCampaigns.length > 0 && (
+                    <CollapsibleSection title="Failed Campaigns">
                     {failedCampaigns.map(c => (<CampaignCard key={c.id} campaign={c} />))}
-                </CollapsibleSection>
+                    </CollapsibleSection>
+                )}
             
         </div>
     )
