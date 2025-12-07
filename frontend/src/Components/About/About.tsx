@@ -6,7 +6,24 @@ const books = [
 function About()  {
     return (
         <div className="about-container">
-            <h2>
+            <h2>Who Is EmberFyre?</h2>
+            <p>I'm Chelsea Harper, the author of the epic fantasy series the <em>Artifice of Power Saga</em>,
+                and EmberFyre Books is the publishing arm of my writing. I've been writing fantasy
+                since I was a young girl, and I'm dedicated to producing quality novels for readers
+                who love the more traditional roots of the fantasy genre. After releasing my first
+                novel in 2021 and discovering the gap in the modern publishing industry for writers
+                dedicated to storycraft above marketing, I took a break from producing novels to plan
+                the direction of my publishing efforts. EmberFyre Books is my re-entry into
+                publishing the stories I can't put down.
+            </p>
+            <h2>What do I write?</h2>
+            <p>
+                While epic fantasy is my first passion and the strongest call in most of my books,
+                I have been experimenting with other genres in expanding my skills as an author. I
+                plan to release at least one romantasy trilogy and potentially some other projects as
+                I build my backlist over the next few years.
+            </p>
+            {/* <h2>
             Who We Are
             </h2>
             <p>EmberFyre Books, LLC, is an independent publishing imprint dedicated to bringing 
@@ -43,7 +60,7 @@ function About()  {
                 stories but don't have the time or skills to handle getting their books in front of the
                 readers who will love them. Her goal is to turn EmberFyre Books into an imprint that helps
                 bring more stories to life, and builds dreams for the authors it supports.
-            </p>
+            </p> */}
         </div>
     )
 }
