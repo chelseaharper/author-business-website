@@ -3,8 +3,6 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Header from './Components/Shared/Header';
 import NavBar from './Components/Shared/NavBar/NavBar';
-import Books from './Components/HomePage/Books';
-import NewsletterForm from './Components/HomePage/NewsletterForm';
 import Homepage from './Components/HomePage/Homepage';
 import BooksPage from './Components/Books/BooksPage';
 import Kickstarters from './Components/Kickstarters/Kickstarters';

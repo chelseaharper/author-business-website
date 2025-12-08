@@ -1,0 +1,9 @@
+.newsletter-form .form-field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.newsletter-form input {
+  width: 100%;
+  display: block;
+}
