@@ -37,18 +37,37 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
 
         <main className="homepage-main">
           <div className="main-card">
-            <h2>Book 1 Re-Release</h2>
-            <p>Big announcement text goes here…</p>
+            <h2><em>Wake of the Phoenix</em> extended edition release!</h2>
+            <div className="release-columns">
+                <img 
+                    src="/Images/Wake of the Phoenix eBook.jpg" 
+                    alt="Cover for Wake of the Phoenix" 
+                    className="release-image" 
+                />
+                <div className="release-text">
+                    <p>A new, extended version of the first book in the Artifice of Power Saga,
+                        <em>Wake of the Phoenix</em>, is set to be released on March 2, 2026.
+                    </p>
+                </div>
+            </div>
           </div>
 
-          <div className="main-card">
+          {/* <div className="main-card">
             <h2>Upcoming Appearances</h2>
-            <p>List any conferences, signings, etc.</p>
-          </div>
+            <p>No Current Events</p>
+          </div> */}
 
           <div className="main-card">
             <h2>News & Updates</h2>
-            <p>General updates, writing notes, etc.</p>
+            <p>
+                The Kickstarter for the limited edition of <em>Wake of the Phoenix</em>, a hardback with
+                foil embossed dust jacket and featuring the last release of the original cover,
+                is nearing final fulfillment! This project was funded back in mid-April and e-books
+                have already been sent to backers. The physical proof was received in late November
+                and approved early December, with orders already placed for final fulfillment. If you
+                missed this Kickstarter and are looking for another shot, keep an eye on our 
+                <a href="/kickstarter"> Kickstarters page</a> page for updates and upcoming campaigns.
+            </p>
           </div>
         </main>
 

@@ -54,3 +54,24 @@
   color: blanchedalmond;
   text-align: center;
 }
+
+a {
+    color: rgb(219, 195, 166);
+}
+
+.release-columns {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.release-image {
+  width: 40%;          /* adjust as needed */
+  max-width: 250px;    /* optional limit */
+  border-radius: 8px;  /* optional */
+}
+
+.release-text {
+  flex: 1;
+}
