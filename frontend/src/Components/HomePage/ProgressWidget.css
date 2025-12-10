@@ -1,3 +1,21 @@
+:root {
+  --ring1: #47378d; /* Drafting */
+  --ring2: #631e0b; /* Self-edit */
+  --ring3: #513a24; /* Professional Edit */
+  --ring4: #3c722e; /* Release Prep */
+}
+/*
+#190e0b
+#311911
+#513a24
+#91724d
+#642e19
+
+70533f
+d09858
+9a4225
+*/
+
 .progress-widget {
   color: #eee;
   text-align: center;
