@@ -9,7 +9,8 @@ h1, h2, h3 {
   }
 
   .backer-container {
-    background-color: black;
+    border: 4px solid #111;
+    background-color: #111;
     color: antiquewhite;
     max-width: 950px;
     margin: 0 auto;
