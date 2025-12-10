@@ -1,6 +1,7 @@
 import Books from './Books';
 import './Homepage.css';
 import NewsletterForm from './NewsletterForm';
+import ProgressWidget from './ProgressWidget';
 
 function Homepage({books} : {books: {id: string, title: string, coverImage: string}[]}) {
     return(
@@ -15,7 +16,14 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
 
           <div className="sidebar-card">
             <h2>Current Project</h2>
-            <p>Book 2 Progress: 48% (example)</p>
+            <ProgressWidget
+                projectTitle='Artifice of Power Saga: Rise of the Moirai'
+                drafting={50}
+                selfEdit={0}
+                proEdit={0}
+                releasePrep={0}
+            />
+            
           </div>
 
           <div className="sidebar-card">
