@@ -61,7 +61,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
                         and his duty to the omnicient prophet he met--and learned to love--while
                         fighting for justice against his corrupt leaders, he's the most powerful pawn
                         the Laisian empire has ever seen. The thief whose very presence derails his
-                        lover's plans wants nothing to do with wither of them. But when did the poor
+                        lover's plans wants nothing to do with either of them. But when did the poor
                         ever get what<em> they </em> want? Together, they might find a way to heal
                         the damage done by a brutal tyrant already dead. Or they might tear this
                         province apart.
