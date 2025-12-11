@@ -46,7 +46,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
                 />
                 <div className="release-text">
                     <p>A new, extended version of the first book in the Artifice of Power Saga,
-                        <em>Wake of the Phoenix</em>, is set to be released on March 2, 2026.
+                        <em>Wake of the Phoenix</em>, is set to be released in March of 2026.
                         This new edition features:
                     </p>
                     <ul>
