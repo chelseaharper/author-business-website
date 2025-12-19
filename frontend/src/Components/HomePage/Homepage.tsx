@@ -66,7 +66,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
                         the damage done by a brutal tyrant already dead. Or they might tear this
                         province apart.
                     </p>
-                    {/* <p><strong>Preorder your copy of the extended edition today.</strong></p> */}
+                    <p><strong>Preorder your copy of the extended edition today.</strong></p>
                 </div>
             </div>
           </div>
