@@ -2,6 +2,7 @@ import Books from './Books';
 import './Homepage.css';
 import NewsletterForm from './NewsletterForm';
 import ProgressWidget from './ProgressWidget';
+import { Link } from 'react-router-dom';
 
 function Homepage({books} : {books: {id: string, title: string, coverImage: string}[]}) {
     return(
@@ -18,8 +19,8 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
             <h2>Current Project</h2>
             <ProgressWidget
                 projectTitle='Artifice of Power Saga: Rise of the Moirai'
-                drafting={50}
-                selfEdit={0}
+                drafting={51}
+                selfEdit={5}
                 proEdit={0}
                 releasePrep={0}
             />
@@ -85,7 +86,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
                 have already been sent to backers. The physical proof was received in late November
                 and approved early December, with orders already placed for final fulfillment. If you
                 missed this Kickstarter and are looking for another shot, keep an eye on our 
-                <a href="/kickstarter"> Kickstarters page</a> page for updates and upcoming campaigns.
+                <Link to="/kickstarter"> Kickstarters page</Link> page for updates and upcoming campaigns.
             </p>
           </div>
         </main>
