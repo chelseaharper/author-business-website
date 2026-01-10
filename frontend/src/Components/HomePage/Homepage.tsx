@@ -19,8 +19,8 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
             <h2>Current Project</h2>
             <ProgressWidget
                 projectTitle='Artifice of Power Saga: Rise of the Moirai'
-                drafting={51}
-                selfEdit={5}
+                drafting={52}
+                selfEdit={9}
                 proEdit={0}
                 releasePrep={0}
             />
