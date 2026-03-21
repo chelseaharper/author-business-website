@@ -17,17 +17,17 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
 
           <div className="sidebar-card">
             <h2>Current Project</h2>
-            <ProgressWidget
+            {/* <ProgressWidget
                 projectTitle='Artifice of Power Saga: Rise of the Moirai'
                 drafting={54}
                 selfEdit={14}
                 proEdit={0}
                 releasePrep={0}
-            />
+            /> */}
 
             <ProgressWidget
                 projectTitle='On Cursed Wings'
-                drafting={3}
+                drafting={48.1}
                 selfEdit={0}
                 proEdit={0}
                 releasePrep={0}
