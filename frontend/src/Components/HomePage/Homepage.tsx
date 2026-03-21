@@ -27,7 +27,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
 
             <ProgressWidget
                 projectTitle='On Cursed Wings'
-                drafting={3}
+                drafting={48.1}
                 selfEdit={0}
                 proEdit={0}
                 releasePrep={0}
@@ -75,7 +75,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
                         the damage done by a brutal tyrant already dead. Or they might tear this
                         province apart.
                     </p>
-                    <p><strong>Preorder your copy of the extended edition today.</strong></p>
+                    {/* <p><strong>Preorder your copy of the extended edition today.</strong></p> */}
                 </div>
             </div>
           </div>
