@@ -27,7 +27,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
 
             <ProgressWidget
                 projectTitle='On Cursed Wings'
-                drafting={48.1}
+                drafting={68.9}
                 selfEdit={0}
                 proEdit={0}
                 releasePrep={0}
