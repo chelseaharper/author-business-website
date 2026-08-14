@@ -1,15 +1,19 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import Header from './Components/Shared/Header';
 import NavBar from './Components/Shared/NavBar/NavBar';
 import Homepage from './Components/HomePage/Homepage';
+import LandingPage from './Components/HomePage/LandingPage';
 import BooksPage from './Components/Books/BooksPage';
 import Kickstarters from './Components/Kickstarters/Kickstarters';
 import Blog from './Components/Blog/Blog';
 import About from './Components/About/About';
+import { BookGenreProvider, useBookGenre } from './Components/HomePage/BookGenreContext';
 
-function App() {
+function AppContent() {
+  const { genre } = useBookGenre();
+
   useEffect(() => {
     document.title = "Musings, Mythos, Magic";
     const link = document.querySelector("link[rel~='icon'") as HTMLLinkElement;
@@ -31,15 +35,25 @@ function App() {
 ];
 
   return (
-    <BrowserRouter>
+    <>
       <Header />
-        <NavBar/>
-          <Routes>
-            <Route path="/" element={<Homepage books={books}/>} />
-            <Route path="/books" element={<BooksPage/>} />
-            <Route path="/kickstarter" element={<Kickstarters/>} />
-            <Route path="/aboutus" element={<About/>} />
-          </Routes>
+      {genre ? <NavBar /> : null}
+      <Routes>
+        <Route path="/" element={genre ? <Homepage books={books}/> : <LandingPage />} />
+        <Route path="/books" element={<BooksPage/>} />
+        <Route path="/kickstarter" element={<Kickstarters/>} />
+        <Route path="/aboutus" element={<About/>} />
+      </Routes>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <BookGenreProvider>
+        <AppContent />
+      </BookGenreProvider>
     </BrowserRouter>
   );
 }
