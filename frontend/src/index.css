@@ -1,6 +1,8 @@
 body {
   background-image: url('../public/Images/wakeofthephoenix_BannerArt.jpg');
   background-size: 300%;
+  background-position: center;
+  background-attachment: fixed;
 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,6 +10,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.romantasy-theme {
+  background-image: linear-gradient(145deg, #f3d9d8 0%, #c88991 48%, #5b2635 100%);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {

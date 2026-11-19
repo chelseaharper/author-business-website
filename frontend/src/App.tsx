@@ -15,6 +15,11 @@ function AppContent() {
   const { genre } = useBookGenre();
 
   useEffect(() => {
+    document.body.classList.toggle('romantasy-theme', genre === 'romantasy');
+    return () => document.body.classList.remove('romantasy-theme');
+  }, [genre]);
+
+  useEffect(() => {
     document.title = "Musings, Mythos, Magic";
     const link = document.querySelector("link[rel~='icon'") as HTMLLinkElement;
     if (link) {

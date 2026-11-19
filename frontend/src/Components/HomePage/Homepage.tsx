@@ -91,7 +91,7 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
                 <h2><em>On Cursed Wings</em> - Upcoming Release!</h2>
                 <div className="release-columns">
                   <img 
-                      src="/Images/On Curséd Wings.jpg" 
+                      src="/Images/On Cursed Wings eBook.jpg" 
                       alt="Cover for On Cursed Wings" 
                       className="release-image" 
                   />
