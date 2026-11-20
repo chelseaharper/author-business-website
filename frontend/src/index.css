@@ -13,8 +13,17 @@ body {
 }
 
 body.romantasy-theme {
-  background-image: linear-gradient(145deg, #f3d9d8 0%, #c88991 48%, #5b2635 100%);
-  background-size: cover;
+  background-color: #080d0e;
+  background-image:
+    linear-gradient(118deg, transparent 0 35%, rgba(111, 63, 139, 0.1) 36%, rgba(167, 73, 111, 0.2) 37%, rgba(111, 63, 139, 0.1) 38%, transparent 40%),
+    linear-gradient(132deg, transparent 0 68%, rgba(145, 49, 69, 0.19) 69%, rgba(111, 63, 139, 0.15) 70%, transparent 72%),
+    linear-gradient(104deg, transparent 0 17%, rgba(111, 63, 139, 0.13) 18%, rgba(157, 57, 82, 0.17) 19%, transparent 20%),
+    radial-gradient(ellipse 44% 30% at 74% 20%, rgba(163, 183, 174, 0.16), transparent 100%),
+    radial-gradient(ellipse 36% 48% at 18% 72%, rgba(57, 91, 69, 0.32), transparent 100%),
+    radial-gradient(ellipse 40% 28% at 86% 82%, rgba(113, 42, 54, 0.2), transparent 100%),
+    conic-gradient(from 205deg at 58% 46%, transparent 0deg, rgba(58, 84, 69, 0.12) 35deg, rgba(133, 153, 135, 0.18) 63deg, rgba(34, 61, 51, 0.14) 98deg, transparent 132deg, rgba(112, 45, 54, 0.13) 205deg, transparent 252deg, rgba(73, 101, 77, 0.13) 305deg, transparent 360deg),
+    conic-gradient(from 35deg at 30% 82%, transparent 0deg, rgba(51, 78, 62, 0.13) 42deg, rgba(119, 142, 119, 0.17) 78deg, transparent 128deg, rgba(89, 39, 48, 0.14) 198deg, transparent 250deg, rgba(60, 91, 68, 0.14) 310deg, transparent 360deg),
+    linear-gradient(145deg, #080d0e 0%, #101918 55%, #080b0c 100%);
   background-attachment: fixed;
 }
 
