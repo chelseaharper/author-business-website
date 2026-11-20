@@ -1,3 +1,39 @@
-.Header {
-    text-align: center;
+.site-header {
+  box-sizing: border-box;
+  max-width: 75%;
+  margin: 20px auto 0;
+  padding: 20px 16px;
+  background-color: #c6b796;
+  color: #191716;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.site-header h1,
+.site-header h2 {
+  color: #191716;
+}
+
+.romantasy-header {
+  background-image:
+    linear-gradient(rgba(37, 17, 26, 0.28), rgba(37, 17, 26, 0.42)),
+    url('../../../public/Images/RmantasyHeader.jpg');
+  background-position: center, center calc(40%);
+  background-repeat: no-repeat;
+  background-size: cover, 98%;
+  background-color: #25111a;
+  color: #fff4ed;
+}
+
+.romantasy-header h1,
+.romantasy-header h2 {
+  color: #fff4ed;
+  text-shadow: 0 2px 6px rgba(35, 10, 20, 0.8);
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    max-width: 100%;
+    margin-top: 0;
   }
+}

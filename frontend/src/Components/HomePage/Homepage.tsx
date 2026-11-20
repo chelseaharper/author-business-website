@@ -3,74 +3,129 @@ import './Homepage.css';
 import NewsletterForm from './NewsletterForm';
 import ProgressWidget from './ProgressWidget';
 import { Link } from 'react-router-dom';
+import { useBookGenre } from './BookGenreContext';
 
 function Homepage({books} : {books: {id: string, title: string, coverImage: string}[]}) {
+    const { genre, setGenre } = useBookGenre();
+
+    if (!genre) {
+        return null; // Landing page should be shown at router level
+    }
+
+    const isRomantasy = genre === 'romantasy';
+
     return(
         <>
         <Books books={books}/>
     <div className="homepage-layout">
 
         <aside className="homepage-sidebar">
+          <div className="sidebar-card genre-selector">
+            <p className="genre-label">Currently viewing: <strong>{isRomantasy ? 'Romantasy' : 'Epic Fantasy'}</strong></p>
+            <div className="genre-buttons">
+              {!isRomantasy && <button onClick={() => setGenre('romantasy')} className="genre-switch-button">Switch to Romantasy</button>}
+              {isRomantasy && <button onClick={() => setGenre('epic-fantasy')} className="genre-switch-button">Switch to Epic Fantasy</button>}
+            </div>
+          </div>
+
           <div className="sidebar-card">
             <NewsletterForm></NewsletterForm>
           </div>
 
           <div className="sidebar-card">
             <h2>Current Project</h2>
-            {/* <ProgressWidget
+             {!isRomantasy && (<>
+            <ProgressWidget
                 projectTitle='Artifice of Power Saga: Rise of the Moirai'
                 drafting={54}
                 selfEdit={14}
                 proEdit={0}
                 releasePrep={0}
-            /> */}
-
-            <ProgressWidget
-                projectTitle='On Cursed Wings'
-                drafting={100}
-                selfEdit={50}
-                proEdit={0}
-                releasePrep={0}
             />
+            </>)}
 
-            <ProgressWidget
-                projectTitle='On Promised Lies'
-                drafting={75}
-                selfEdit={0}
-                proEdit={0}
-                releasePrep={0}
-            />
+            {isRomantasy && (
+              <>
+                <ProgressWidget
+                    projectTitle='On Cursed Wings'
+                    drafting={100}
+                    selfEdit={50}
+                    proEdit={0}
+                    releasePrep={0}
+                />
+
+                <ProgressWidget
+                    projectTitle='On Withered Strings'
+                    drafting={75}
+                    selfEdit={0}
+                    proEdit={0}
+                    releasePrep={0}
+                />
+              </>
+            )}
+
+            {!isRomantasy && (
+              <p className="genre-note">Check back soon for updates on epic fantasy projects!</p>
+            )}
             
           </div>
 
           <div className="sidebar-card">
             <h2>Recent Reads</h2>
-            <p>Currently I'm reading Martin's <em>A Game of Thrones</em> for the first time...
+            {isRomantasy && (
+              <p>Currently I'm reading romantic tales that capture the essence of love intertwined with adventure and magic.</p>
+            )}
+            {!isRomantasy && (
+              <p>Currently I'm reading Martin's <em>A Game of Thrones</em> for the first time...
                 yes, I'm a political epic fantasy author who had never read <em>A Game of Thrones</em>.
                 I also greatly enjoyed reading the first few books in Sanderson's Stormlight Archives recently.
             </p>
+            )}
           </div>
         </aside>
 
         <main className="homepage-main">
           <div className="main-card">
-            <h2><em>Wake of the Phoenix</em> extended edition release!</h2>
-            <div className="release-columns">
-                <img 
-                    src="/Images/Wake of the Phoenix eBook.jpg" 
-                    alt="Cover for Wake of the Phoenix" 
-                    className="release-image" 
-                />
-                <div className="release-text">
+            {isRomantasy && (
+              <>
+                <h2><em>On Cursed Wings</em> - Upcoming Release!</h2>
+                <div className="release-columns">
+                  <img 
+                      src="/Images/On Cursed Wings eBook.jpg" 
+                      alt="Cover for On Cursed Wings" 
+                      className="release-image" 
+                  />
+                  <div className="release-text">
+                    <p>Look out for the upcoming release of <em>On Curséd Wings</em>, a reimagining of
+                    Villanueve's original Beauty and the Beast tale with a cursed forest reminiscent of
+                    Naomi Novik's Uprooted.
+                    </p>
+                    <p>
+                      This romantasy weaves together themes of love, magic, and self-discovery in a 
+                      world where beauty masks darkness and true connection transcends curses.
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+            {!isRomantasy && (
+              <>
+                <h2><em>Wake of the Phoenix</em> extended edition release!</h2>
+                <div className="release-columns">
+                  <img 
+                      src="/Images/Wake of the Phoenix eBook.jpg" 
+                      alt="Cover for Wake of the Phoenix" 
+                      className="release-image" 
+                  />
+                  <div className="release-text">
                     <p>A new, extended version of the first book in the Artifice of Power Saga,
-                        <em>Wake of the Phoenix</em>, is set to be released in April of 2026.
+                        <em>Wake of the Phoenix</em>, was released via Kickstarter in April of 2026.
                         This new edition features:
                     </p>
                     <ul>
                         <li>New, Updated Cover!</li>
                         <li>Additional Chapters!</li>
                         <li>A brand new epilogue!</li>
-                        <li>A teaser of Book 2 after the main content!</li>
                     </ul>
                     <p>
                         The rebellion is over, but for the war hero prince of Sentar Province,
@@ -83,9 +138,10 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
                         the damage done by a brutal tyrant already dead. Or they might tear this
                         province apart.
                     </p>
-                    {/* <p><strong>Preorder your copy of the extended edition today.</strong></p> */}
+                  </div>
                 </div>
-            </div>
+              </>
+            )}
           </div>
 
           {/* <div className="main-card">
@@ -95,15 +151,23 @@ function Homepage({books} : {books: {id: string, title: string, coverImage: stri
 
           <div className="main-card">
             <h2>News & Updates</h2>
-            <p>
+            {isRomantasy && (
+              <p>
+                Exciting developments are underway for the romantasy collection! Keep an eye on this space
+                for upcoming release announcements, exclusive previews, and special content for our romantasy readers.
+              </p>
+            )}
+            {!isRomantasy && (
+              <p>
                 The Kickstarter for the limited edition of <em>Wake of the Phoenix</em>, a hardback with
                 foil embossed dust jacket featuring the last release of the original cover,
                 is nearing final fulfillment! This project was funded back in mid-April and e-books
                 have already been sent to backers. The physical proof was received in late November
                 and approved early December, with orders already placed for final fulfillment. If you
                 missed this Kickstarter and are looking for another shot, keep an eye on our 
-                <Link to="/kickstarter"> Kickstarters page</Link> page for updates and upcoming campaigns.
-            </p>
+                <Link to="/kickstarter"> Kickstarters page</Link> for updates and upcoming campaigns.
+              </p>
+            )}
           </div>
         </main>
 

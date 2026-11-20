@@ -1,0 +1,141 @@
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.landing-container {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.landing-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.landing-subtitle {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.genre-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.genre-card {
+  padding: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.romantasy-card {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.romantasy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+  border-color: white;
+}
+
+.epic-fantasy-card {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.epic-fantasy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+  border-color: white;
+}
+
+.genre-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.genre-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.choice-button {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.romantasy-card .choice-button {
+  color: #f5576c;
+}
+
+.epic-fantasy-card .choice-button {
+  color: #00f2fe;
+}
+
+.choice-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.landing-footer {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .landing-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .landing-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .landing-subtitle {
+    font-size: 1rem;
+  }
+
+  .genre-choices {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .genre-card {
+    padding: 1.5rem;
+  }
+
+  .genre-card h2 {
+    font-size: 1.5rem;
+  }
+}
